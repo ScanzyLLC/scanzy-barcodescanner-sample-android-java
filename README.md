@@ -4,28 +4,17 @@ native android sample to use ScanzyBarcodeScannerSDK
 
 Follow below steps to use ScanzyBarcodeScannerSDK.
 
-## Install ScanzyBarcodeScannerSDK.aar
+## Install ScanzyBarcodeScannerSDK
 
-1. download ScanzyBarcodeScannerSDK.aar from XXX.
-2. put the ScanzyBarcodeScannerSDK.aar to the libs folder in your app (create the libs folder if it doesn't exist).
 3. In your app module's build.gradle file, add below dependencies:
 
 ```gradle
 dependencies {
-
-    implementation fileTree(dir: 'libs', include: ['*.jar','ScanzyBarcodeScannerSDK.aar'])
-
-    implementation 'androidx.appcompat:appcompat:1.4.2'
-    implementation 'com.google.android.material:material:1.6.1'
-    implementation 'androidx.navigation:navigation-fragment:2.4.1'
-    implementation 'androidx.navigation:navigation-ui:2.4.1'
+    ...
     
-    def camerax_version = "1.0.2"
-    // CameraX
-    implementation "androidx.camera:camera-camera2:${camerax_version}"
-    implementation "androidx.camera:camera-lifecycle:${camerax_version}"
-    implementation "androidx.camera:camera-view:1.0.0-alpha32"
-    implementation "com.google.android.gms:play-services-analytics:+"
+    implementation 'com.scanzy:ScanzyBarcodeScannerSDK:0.0.2'
+
+   ...
 }
 
 ```
@@ -35,7 +24,7 @@ dependencies {
 1. In your app's entry point, such as Oncreate method in MainActivity, set the license key you obtained from Scanzy.
 
 ```java
-ScanzyBSLicense.setLicense(getApplicationContext(),"your-valid-licensekey");
+ ScanzyBSLicense.initLicense(getApplicationContext(),"your-valid-licensekey");
 ```
 
 For example, the code in the sample app:
@@ -51,7 +40,7 @@ For example, the code in the sample app:
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
 
-        ScanzyBSLicense.setLicense(getApplicationContext(),"your-valid-licensekey");
+         ScanzyBSLicense.initLicense(getApplicationContext(),"your-valid-licensekey");
     }
     
 ```
