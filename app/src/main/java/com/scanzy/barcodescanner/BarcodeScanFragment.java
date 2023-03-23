@@ -19,9 +19,9 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import com.scanzy.barcodescanner.databinding.FragmentFirstBinding;
 import com.scanzy.datacapture.barcodescanner.BarcodeScanStatus;
-import com.scanzy.datacapture.barcodescanner.ScanzyBSBarcodeFormat;
-import com.scanzy.datacapture.barcodescanner.ScanzyBSBarcodeManager;
-import com.scanzy.datacapture.barcodescanner.ScanzyBSBarcodeOptions;
+import com.scanzy.datacapture.barcodescanner.ScanzyBarcodeFormat;
+import com.scanzy.datacapture.barcodescanner.ScanzyBarcodeManager;
+import com.scanzy.datacapture.barcodescanner.ScanzyBarcodeOptions;
 
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
@@ -66,24 +66,24 @@ public class BarcodeScanFragment extends Fragment {
                 });
 
         binding.buttonFirst.setOnClickListener(view1 -> {
-            ScanzyBSBarcodeOptions barcodeOptions = new ScanzyBSBarcodeOptions(
+            ScanzyBarcodeOptions barcodeOptions = new ScanzyBarcodeOptions(
                     false,
                     true,
                     true,
                     false,
                     EnumSet.of(
-                            ScanzyBSBarcodeFormat.Code128,
-                            ScanzyBSBarcodeFormat.Code39,
-                            ScanzyBSBarcodeFormat.QRCode,
-                            ScanzyBSBarcodeFormat.EAN13,
-                            ScanzyBSBarcodeFormat.UPCA));
-            ScanzyBSBarcodeManager manager = new ScanzyBSBarcodeManager(getActivity(), barcodeOptions);
+                            ScanzyBarcodeFormat.Code128,
+                            ScanzyBarcodeFormat.Code39,
+                            ScanzyBarcodeFormat.QRCode,
+                            ScanzyBarcodeFormat.EAN13,
+                            ScanzyBarcodeFormat.UPCA));
+            ScanzyBarcodeManager manager = new ScanzyBarcodeManager(getActivity(), barcodeOptions);
             manager.scan(launchBarcodeScanActivity);
         });
     }
 
     public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent data) {
-        if (requestCode == ScanzyBSBarcodeManager.RC_BARCODE_CAPTURE) {
+        if (requestCode == ScanzyBarcodeManager.RC_BARCODE_CAPTURE) {
             if (resultCode == BarcodeScanStatus.SUCCESS) {
                 if (data != null) {
                     String barcode = data.getStringExtra("barcode");

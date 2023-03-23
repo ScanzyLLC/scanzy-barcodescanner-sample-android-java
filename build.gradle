@@ -1,8 +1,10 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     repositories {
+        //mavenLocal()
         google()
         mavenCentral()
+        //maven {url("C:\\Users\\Forrest\\.m2\\repository")}
     }
     dependencies {
         classpath "com.android.tools.build:gradle:7.0.3"

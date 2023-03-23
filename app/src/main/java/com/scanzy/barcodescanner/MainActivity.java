@@ -9,8 +9,8 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.scanzy.barcodescanner.databinding.ActivityMainBinding;
-import com.scanzy.datacapture.barcodescanner.ScanzyBSBarcodeManager;
-import com.scanzy.datacapture.barcodescanner.ScanzyBSLicense;
+import com.scanzy.datacapture.barcodescanner.ScanzyBarcodeManager;
+//import com.scanzy.datacapture.barcodescanner.ScanzyLicense;
 
 import android.view.Menu;
 import android.view.MenuItem;
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
 
-        ScanzyBSLicense.initLicense(getApplicationContext(),"your-valid-licensekey");
+        ScanzyBarcodeManager.setLicense(getApplicationContext(),"your-valid-licensekey");
     }
 
     @Override
