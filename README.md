@@ -1,8 +1,12 @@
 # scanzy-barcodescanner-sample-android-java
 native android sample to use ScanzyBarcodeScannerSDK
 
+## Environment Setup
 
-Follow below steps to use ScanzyBarcodeScannerSDK.
+Android Studio is the official IDE to develop Android mobile apps. Follow the official site to setup the IDE and understand the concepts. [Android Studio](https://developer.android.com/studio/intro)
+
+
+## Get Started
 
 ## Install ScanzyBarcodeScannerSDK
 
