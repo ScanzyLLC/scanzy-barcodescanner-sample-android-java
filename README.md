@@ -1,14 +1,12 @@
 # scanzy-barcodescanner-sample-android-java
 native android sample to use ScanzyBarcodeScannerSDK
 
-## Environment Setup
+## Prerequisites
 
 Android Studio is the official IDE to develop Android mobile apps. Follow the official site to setup the IDE and understand the concepts. [Android Studio](https://developer.android.com/studio/intro)
 
 
-## Get Started
-
-## Install ScanzyBarcodeScannerSDK
+## Installation
 
 3. In your app module's build.gradle file, add below dependencies:
 
@@ -23,7 +21,7 @@ dependencies {
 
 ```
 
-## Start to scan.
+## Quick Start
 
 1. In your app's entry point, such as Oncreate method in MainActivity, set the license key you obtained from Scanzy.
 
@@ -107,7 +105,7 @@ If you still use the old ways, do like below:
     }
 ```
 
-That is all you need to use ScanzyBarcodeScannerSDK, happy coding :joy:
+## API Specification
 
 Below gives you more details about the parameters:
 
