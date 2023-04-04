@@ -23,7 +23,7 @@ dependencies {
 
 ## Quick Start
 
-1. In your app's entry point, such as an Oncreate method in MainActivity, set the license key you obtained from Scanzy.
+1. In your app's entry point, such as an Oncreate method in MainActivity, set the license key you obtained from [Scanzy](https://scanzy.com) for free trial.
 
 ```java
  ScanzyBarcodeManager.setLicense(getApplicationContext(),"your-valid-licensekey");
@@ -147,15 +147,17 @@ ScanzyBarcodeOptions is defined as:
 ```java
 public class ScanzyBarcodeOptions {
    
-    public ScanzyBarcodeOptions(boolean enableVibration, boolean enableBeep, boolean enableAutoZoom, boolean enableScanRectOnly, EnumSet<ScanzyBSBarcodeFormat> formats) {}
+    public ScanzyBarcodeOptions(boolean enableVibration, 
+                                boolean enableBeep, 
+                                boolean enableAutoZoom, 
+                                boolean enableScanRectOnly, 
+                                EnumSet<ScanzyBSBarcodeFormat> formats) {}
 ```
 
-enableBeep: play a beep sound when a barcode is detected.<br>
-
-enableVibration: vibrate your phone when a barcode is detected.<br>
-
-enableAutoZoom: the library will zoom in/out automatcially to scan a barcode.<br>
-
-enableScanRectOnly: only scan the view finder area.<br>
-
-formats: the barcode formats.<br>
+|     Parameter    |   Description         | 
+| ------------- |:-------------:| 
+| enableVibration      | vibrate your phone when a barcode is detected |
+| enableBeep      |   play a beep sound when a barcode is detected    |  
+| enableAutoZoom |   the library will zoom in/out automatcially to scan a barcode    |   
+| enableScanCropRectOnly |   only scan the view finder area    |   
+| formats |   the barcode formats    |   
