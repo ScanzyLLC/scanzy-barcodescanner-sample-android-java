@@ -1,5 +1,7 @@
 # scanzy-barcodescanner-sample-android-java
-Native Android sample to use ScanzyBarcodeScannerSDK
+Native Android sample to use ScanzyBarcodeScannerSDK. 
+
+If you have any questions or need help, check out official website [scanzy.com](https://scanzy.com). Get a free trial license, you'll be able to integrate Scanzy SDK to your app in less than an hour, and it's insanely simple!
 
 ## Prerequisites
 
@@ -23,7 +25,7 @@ dependencies {
 
 ## Quick Start
 
-1. In your app's entry point, such as an Oncreate method in MainActivity, set the license key you obtained from [Scanzy](https://scanzy.com) for free trial.
+1. In your app's entry point, such as an Oncreate method in MainActivity, set the license key you obtained from [scanzy.com](https://scanzy.com) for free trial.
 
 ```java
  ScanzyBarcodeManager.setLicense(getApplicationContext(),"your-valid-licensekey");
