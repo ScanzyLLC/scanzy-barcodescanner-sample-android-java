@@ -1,4 +1,4 @@
-# # Scanzy Barcode Scanner SDK Guideline - Android
+# scanzy-barcodescanner-sample-android-java
 Native Android sample to use ScanzyBarcodeScannerSDK that implements the barcode capture capabilities of the ScanzyBarcodeScannerSDK for mobile. It supports reading a large number of different barcode symbologies, such as Code39, Code93, Code128, Codabar, UPC-A, UPC-E, EAN-8, EAN-13, ITF, QRCode, Aztec, PDF-417, Data Matrix, etc.
 
 If you have any questions or need help, check out official website [scanzy.com](https://scanzy.com). Get a free trial license, you'll be able to integrate Scanzy SDK to your app in less than an hour, and it's insanely simple!
